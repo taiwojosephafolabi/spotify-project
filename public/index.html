@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 id="heading">Spotify Sign Up</h1>
+    <section class="form">
+      <div class="signup-heading">
+        <h2>Sign up using your email address</h2>
+      </div>
+      <div class="data-inputs">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname" /><br /><br />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="ipassword">Password:</label>
+        <input type="password" id="ipassword" name="ipassword" /><br /><br />
+        <label for="cassword">Confirm Password:</label>
+        <input type="password" id="cpassword" name="cpassword" /><br /><br />
+        <label for="genre">Favourite Genre:</label>
+        <select name="genres" id="genre-select">
+          <option value="">--Please choose a genre--</option>
+          <option value="pop">Pop</option>
+          <option value="hiphop">Hip Hop</option>
+          <option value="jazz">Jazz</option>
+          <option value="rnb">R&B</option>
+          <option value="rap">Rap</option>
+          <option value="afrobeats">Afrobeats</option>
+          <option value="gospel">Gospel</option></select
+        ><br /><br />
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday"><br /><br />
+        <input type="submit" value="Submit" onclick="jsfunction()"/>
+      </div>
+    </section>
+    <script src="../backend/script.js"></script>
+  </body>
+</html>
