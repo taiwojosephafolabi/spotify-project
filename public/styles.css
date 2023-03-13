@@ -11,15 +11,16 @@ body{
   flex-flow: column wrap;
   align-items: center;
   background-color: #1DB954;
+  margin: 0px, auto;
+  width: fit-content;
+  padding: 20px;
   border-radius: 20px;
-  height: 50vh;
-  width: 50vh;
-  
 }
 
 .signup-heading h2{
   text-align: center;
-  text-shadow: white 1px 1px;
+  color: black;
+  /* text-shadow: #0e5025 1px 1px; */
 }
 
 label{
