@@ -1,38 +1,204 @@
-body{
-  background-color: white
+@font-face {
+  font-family: Gotham;
+  src: url(./font/GothamMedium.ttf);
 }
 
-#heading{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.796);
+  border-radius: 10px;
+
+}
+
+.navbar #spotify-logo2 {
+  float: left;
+  width: 100px;
+  padding: 10px;
+}
+
+.navbar a {
+  display: block;
+  flex-basis: content;
+  float: center;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #1db954;
+  padding: 20px;
+}
+
+.navbar #search-bar {
+  display: block;
+  float: right;
+  align-self: right;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.navbar button {
+  display: block;
+  float: right;
+  padding: 6px 10px;
+  margin-right: 0px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #1db954;
+}
+
+body {
+  background-color: white;
+  font-family: "Gotham";
+  margin: 20px;
+}
+
+p{
   text-align: center;
 }
+#heading {
+  text-align: center;
+  font-size: medium;
+}
 
-.form{
+.form {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  background-color: #1DB954;
+  margin: auto;
+  background-color: #1db954;
   margin: 0px, auto;
   width: fit-content;
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
   border-radius: 20px;
 }
 
-.signup-heading h2{
+.signup-heading h2 {
   text-align: center;
   color: black;
+  font-size: small;
+  margin-bottom: 20px;
   /* text-shadow: #0e5025 1px 1px; */
 }
 
-label{
+#spotify-logo {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+label {
   color: white;
 }
 
-input{
+input {
   border-radius: 5px;
 }
 
-#submit-button{
+#submit-button {
   display: flex;
-  background-color: #0e5025;
+  background-color: white;
+  border: 2px solid black;
+  color: green;
+  font-weight: bold;
+  margin: auto;
+  height: 50px;
+  transition-duration: 0.4s;
+}
+
+#submit-button:hover {
+  background-color: green;
   color: white;
+}
+
+#confirm-button {
+  display: flex;
+  justify-content: center;
+}
+
+#confirm-button #yes-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid black;
+  color: green;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  transition-duration: 0.4s;
+  justify-content: center;
+}
+
+#confirm-button #yes-button:hover{
+  background-color: green;
+  color: white;
+}
+
+#confirm-button #no-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid black;
+  color: green;
+  font-weight: bold;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+  transition-duration: 0.4s;
+}
+
+#confirm-button #no-button:hover{
+  background-color: green;
+  color: white;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(auto); 
+  /* column-gap: 10px;
+  row-gap: 15px; */
+  /* border: 5px solid #1db954; */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.796);
+}
+
+.album-card {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  padding: 10px;
+  margin: 20px;
+  border: white;
+  border-radius: 10px;
+  background-color: black;
+  border: 2px solid #1db954;
+  color: white
+}
+
+.album-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  margin: auto;
 }

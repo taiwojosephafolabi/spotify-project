@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <nav class="navbar">
-    <img src="../img/spotify-logo.png">
+   <img id="spotify-logo" src="./img/spotify-logo.png">
   </nav>
   <body>
     <h1 id="heading">Want to start listening to your favourite songs...</h1>
@@ -16,7 +16,7 @@
       <div class="signup-heading">
         <h2>Sign up to Spotify using your email address</h2>
       </div>
-      <form action="/submit" method="POST">
+      <form id="signup-form" action="/confirm-user/:id" method="GET">
         <label for="fName">First Name:</label>
         <input type="text" id="fName" name="fName" /><br /><br />
         <label for="lName">Last Name:</label>
@@ -26,7 +26,7 @@
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" /><br /><br />
         <label for="iPassword">Password:</label>
-        <input type="password" id="iPassword" name="iPassword" /><br /><br />
+        <input type="password" id="iPassword" name="iPassword" minlength="4"/><br /><br />
         <label for="cPassword">Confirm Password:</label>
         <input type="password" id="cPassword" name="cPassword" /><br /><br />
         <label for="favGenre">Favourite Genre:</label>
@@ -43,6 +43,7 @@
         <label for="birthday">Date of Birth:</label>
         <input type="date" id="birthday" name="birthday"><br /><br />
         <input id="submit-button" type="submit" value="Sign Up!" action="/submit" />
+        <!-- <input id="submit-button" type="submit" value="Sign Up!" action="/confirm-user/:id" /> -->
         </form>
     </section>
     <script src="../backend/script.js"></script>

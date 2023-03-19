@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation - Spotify</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <nav class="navbar">
+    <img id="spotify-logo" src="./img/spotify-logo.png">
+  </nav>
+  <body>
+    <h1 id="heading">Profile Data</h1>
+    <p id="profileData"></p>
+    <p>Is this data correct?</p>
+    <span id="confirm-button">
+    <!-- https://www.scaler.com/topics/how-to-make-a-button-link-to-another-page-in-html/ -->
+    <button id="yes-button" value="Yes" type="button" onclick="window.location.href = '/spotifyHome';">Yes</button>
+    <button id="no-button" value="No" type="button" onclick="window.location.href = '/signup';">No</button>
+    </span>
+    <script src="../backend/script.js"></script>
+  </body>
+</html>
