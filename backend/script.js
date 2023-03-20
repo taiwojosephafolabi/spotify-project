@@ -1,22 +1,21 @@
 'use strict';
 
-//Imports - imports
+// Imports - imports
 import express from 'express';
 import bodyParser from 'body-parser';
-import { fileURLToPath } from 'url';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { v4 as uuid } from 'uuid';
 import { body, check, validationResult } from 'express-validator';
 import expressValidator from 'express-validator';
 import expressSession from 'express-session';
 import * as dotenv from 'dotenv'
 
-
 const app = express();
 dotenv.config();
 // 
 
-//Imports - require
+// Imports - require
 // const express = require('express');
 // const bodyParser = require('body-parser');
 // const { fileURLToPath } = require ('url');
@@ -31,18 +30,22 @@ dotenv.config();
 //
 
 // Listen on port
-app.listen(3000, () => {
-  console.log('Express is running on port 3000');
-});
+// app.listen(3000, () => {
+//   console.log('Express is running on port 3000');
+// });
 
-app.listen(process.env.PORT, () => {
-  console.log('Express is running on port');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Express is running on port ${port}`);
 });
 //
 
 // https://codingbeautydev.com/blog/javascript-dirname-is-not-defined-in-es-module-scope/
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+console.log(__dirname); /* My root dir is the backend dir */ 
+console.log(__filename);
 //
 
 // Middleware
@@ -133,11 +136,20 @@ app.get('/confirm-user/:id', (req, res) => {
   console.log(spotifyUsers[0]);
   // alertFunc();
   res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/confirmation.html')
-})
+});
 
 app.get('/spotifyHome', (req, res) => {
   res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/homepage.html')
-})
+});
+
+app.get('/signup/:id', (req, res) => {
+  res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/index.html');
+});
+
+app.put('/signup/:id', (req, res) => {
+  res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/index.html');
+});
+
 
 // HTML Elements
 // const form = document.getElementById('signup-form');
