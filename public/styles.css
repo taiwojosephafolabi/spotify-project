@@ -202,3 +202,7 @@ input {
   width: 250px;
   margin: auto;
 }
+
+.album-card:hover {
+  background-color: rgba(0, 0, 0, 0.416);
+}
