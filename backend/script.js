@@ -9,9 +9,11 @@ import { v4 as uuid } from 'uuid';
 import { body, check, validationResult } from 'express-validator';
 import expressValidator from 'express-validator';
 import expressSession from 'express-session';
+import * as dotenv from 'dotenv'
 
 
 const app = express();
+dotenv.config();
 // 
 
 //Imports - require
@@ -23,13 +25,18 @@ const app = express();
 // const { body, check, validationResult } = require ('express-validator');
 // const expressValidator = require ('express-validator');
 // const expressSession = require ('express-session');
+// require('dotenv').config()
 
 // const app = express();
 //
 
-// Listen on port 3000
+// Listen on port
 app.listen(3000, () => {
   console.log('Express is running on port 3000');
+});
+
+app.listen(process.env.PORT, () => {
+  console.log('Express is running on port');
 });
 //
 
@@ -102,7 +109,7 @@ app.post('/submit', /*...signupValidators ,*/ (req, res) => {
   // }
   // res.redirect('/signup')
   res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/confirmation.html');
-  // res.redirect('http://localhost:3000/confirm/user/:id')
+  res.redirect('http://localhost:3000/confirm-user/:id')
 });
 //
 // const clickSubmit = () => {
@@ -116,9 +123,15 @@ app.get('/users', (req, res) => {
   res.send(spotifyUsers)
 });
 
+// const alertFunc = () => {
+//   window.alert(`Hi ${req.body.fName} ${req.body}`)
+// };
+
 // Next steps
 app.get('/confirm-user/:id', (req, res) => {
   // res.send(`Hi ${req.body.fName} ${req.body.lName}! You haved signed up successfully!`)
+  console.log(spotifyUsers[0]);
+  // alertFunc();
   res.sendFile('C:/Users/Joseph/Projects/spotify-project/public/confirmation.html')
 })
 
